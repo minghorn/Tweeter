@@ -11,10 +11,10 @@ import UIKit
 class User: NSObject {
     
     //Stored Properties
-    var name: NSString?
-    var screenname: NSString?
+    var name: String?
+    var screenname: String?
     var profileUrl: NSURL?
-    var tagline: NSString?
+    var tagline: String?
     var dictionary: NSDictionary?
     static let userDidLogout = "userDidLogout"
     
@@ -24,7 +24,8 @@ class User: NSObject {
         screenname = dict["screen_name"] as? String
         
         let profileUrlString = dict["profile_image_url_https"] as? String
-        if let profileUrlString = profileUrlString {
+        if var profileUrlString = profileUrlString {
+            profileUrlString = profileUrlString.stringByReplacingOccurrencesOfString("_normal", withString: "")
             profileUrl = NSURL(string: profileUrlString)
         }
         

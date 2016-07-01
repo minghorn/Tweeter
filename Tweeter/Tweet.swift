@@ -13,11 +13,17 @@ class Tweet: NSObject {
     var timestamp: NSDate?
     var retweets: Int = 0
     var favorites: Int = 0
+    var author: User?
+    var tweetId: String!
     
     init(dict: NSDictionary) {
         text = dict["text"] as? String
         retweets = (dict["retweet_count"] as? Int) ?? 0
-        favorites = (dict["favourites_count"] as? Int) ?? 0
+        favorites = (dict["favorite_count"] as? Int) ?? 0
+        tweetId = dict["id_str"] as? String
+        
+        let userDict = dict["user"] as! NSDictionary
+        author = User(dict: userDict)
         let timestampString = dict["created_at"] as? String
         
         if let timestampString = timestampString {
@@ -36,5 +42,10 @@ class Tweet: NSObject {
             tweets.append(tweet)
         }
         return tweets
+    }
+    
+    func getDateString(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        return formatter.stringFromDate(date)
     }
 }
