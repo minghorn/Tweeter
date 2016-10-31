@@ -52,7 +52,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<a href="https://www.dropbox.com/s/l8pvgjhd7npznoi/Tweeter.mov?dl=0">Video of walkthrough"
+<a href="https://www.dropbox.com/s/l8pvgjhd7npznoi/Tweeter.mov?dl=0">Video of walkthrough</a>
 
 ## Notes
 
