@@ -1,6 +1,6 @@
 # Project 4 - *Tweeter*
 
-**Tweeter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
+**Tweeter** is a basic twitter app to read and compose tweets via the [Twitter API](https://apps.twitter.com/).
 
 Time spent: **30** hours spent in total
 
